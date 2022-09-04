@@ -15,12 +15,16 @@ function setup(){
 sea. scale = 0.3;
 
 ship = createSprite (200, 200, 200, 200);
-ship .addAnimation  ("movieng", ship_moving);
+ship .addAnimation  ("moving", ship_moving);
 ship.scale = 0.3;
+
+
 }
 
 function draw() {
   background("blue");
- drawSprites ();
+  drawSprites ();
+  if (sea.x <0) {
+  sea.x=sea.width/2}
   
 }
